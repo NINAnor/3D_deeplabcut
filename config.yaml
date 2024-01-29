@@ -1,0 +1,42 @@
+# Project definitions (do not edit)
+Task: /host/proj_ana
+scorer: Benjamin
+date: Jan16
+
+# Project path (change when moving around)
+project_path: /host/analysis_cam2_cam3
+
+# Plotting configuration
+skeleton:     # Note that the pairs must be defined, as you want them linked!
+- - body-1
+  - body-2
+- - head
+  - body-1
+- - tail
+  - body-2
+skeleton_color: black
+pcutoff: 0.4
+colormap: jet
+dotsize: 15
+alphaValue: 0.8
+markerType: '*'
+markerColor: r
+
+# Number of cameras, camera names, path of the config files, shuffle index and trainingsetindex used to analyze videos:
+num_cameras: 2
+camera_names:
+- camera-02
+- camera-03
+scorername_3d: benc # Enter the scorer name for the 3D output
+individuals:
+- fish-1
+- fish-2
+- fish-3
+trainingsetindex_camera-02: 0
+trainingsetindex_camera-03: 0
+config_file_camera-02: 
+  /host/analysis_cam2_cam3/Four_camera_tracking_DLC/Side_view-Kamal-2023-06-15/config.yaml
+config_file_camera-03: 
+  /host/analysis_cam2_cam3/Four_camera_tracking_DLC/Top_View-Kamal-2023-06-15/config.yaml
+shuffle_camera-02: 1
+shuffle_camera-03: 1
